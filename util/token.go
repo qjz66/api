@@ -24,14 +24,13 @@ type TokenClaims struct {
 	jwt.StandardClaims
 }
 
-func GenerateToken(id int64, username string) (token string, err error) {
+func GenerateToken(id int64) (token string, err error) {
 	// 在使用GenerateToken函数之前生成jwtKey
 	jwtKey = generateJWTKey()
 	nowTime := time.Now()
 	expireTime := nowTime.Add(1800 * time.Second)
 	claims := TokenClaims{
-		Id:       id,
-		Username: username,
+		Id: id,
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: expireTime.Unix(),
 			Issuer:    "ByteDance-Tiny-Douyin",
