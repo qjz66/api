@@ -43,3 +43,8 @@ func LoginHandler(c *gin.Context) {
 		"token":   token,
 	})
 }
+
+func FileHandler(c *gin.Context) {
+	fileName := c.Query("file_name")
+	c.File("./file/" + fileName)
+}
