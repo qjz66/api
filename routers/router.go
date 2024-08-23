@@ -9,7 +9,7 @@ func InitRouter() *gin.Engine {
 	{
 		api.POST("/register")
 		api.POST("/login")
-		api.POST("file")
+		api.POST("/file")
 	}
 	return router
 }
