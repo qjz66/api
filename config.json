@@ -2,10 +2,10 @@
   "database" : {
     "mysql" : {
       "username" : "root",
-      "password" : "qjzzjq20031013",
-      "host" : "localhost",
+      "password" : "root1234",
+      "host" : "mysql8019",
       "port" : 3306,
-      "dbname" : "API"
+      "dbname" : "test"
     }
   }
 }
